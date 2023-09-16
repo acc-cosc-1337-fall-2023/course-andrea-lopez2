@@ -30,10 +30,12 @@ HEADER_DIRECTORIES(header_list)
 
 include_directories(${header_list})
 
+
 ADD_SUBDIRECTORY(src)
 
 enable_testing()
 ADD_SUBDIRECTORY(test)
+
 
 
 
