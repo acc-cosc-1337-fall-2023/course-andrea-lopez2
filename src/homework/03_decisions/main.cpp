@@ -48,6 +48,7 @@ int main()
 			string letter = get_letter_grade_using_switch(grade);
 			cout << "(SWITCH) You got a -> " << letter << endl;
 		}
+		
 	}
 
 	cout << "Exiting";
