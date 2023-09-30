@@ -8,7 +8,7 @@ using std::string;
 
 //add function code here
 
-double get_gc_content(const string dna)
+double get_gc_content(const string& dna)
 {
     int gc = 0;
     int sequence_len = dna.length();

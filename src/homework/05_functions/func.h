@@ -3,6 +3,6 @@
 using std::string;
 
 // funtcions 
-double get_gc_content(const string dna);
+double get_gc_content(const string& dna);
 string get_dna_complement (string dna);
 string reverse_string(string dna);

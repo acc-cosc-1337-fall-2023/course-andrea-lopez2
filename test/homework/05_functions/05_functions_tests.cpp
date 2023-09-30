@@ -24,6 +24,5 @@ TEST_CASE("Verify function get dna complement.")
 {
 	REQUIRE(get_dna_complement("AAAACCCGGT") == "ACCGGGTTTT");
 	REQUIRE(get_dna_complement("CCCGGAAAAT") == "ATTTTCCGGG");
-	
 }
 
