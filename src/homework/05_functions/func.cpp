@@ -20,6 +20,7 @@ double get_gc_content(const string& dna)
         {
             gc++;
         }
+        
         }
     
     return (double)gc / sequence_len;

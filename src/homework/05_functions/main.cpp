@@ -22,7 +22,6 @@ int main()
 
 	double result = get_gc_content(gc_content);
 	cout << result << endl;
-
 	}
 
 	else if(choice == 2)
@@ -33,7 +32,7 @@ int main()
 
 	string result = get_dna_complement(dna_complement);
 	cout << result << endl;
-
+	
 	}
 
 	else

@@ -11,7 +11,6 @@ TEST_CASE("Verify function get_gc_content.")
 {
 	REQUIRE(get_gc_content("AGCTATAG") == 0.375);
 	REQUIRE(get_gc_content("CGCTATAG") == 0.5);
-
 }
 
 TEST_CASE("Verify function get_reverse_string.") 
