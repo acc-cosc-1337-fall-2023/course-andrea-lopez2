@@ -1,2 +1,2 @@
-add_library(ex_06_01_library "create_str.cpp" "create_str.h" "tic_tac_toe_manager.cpp" "tic_tac_toe_manager.h")
-add_executable(ex_06_01_exe "main.cpp" "create_str.cpp" "tic_tac_toe_manager.cpp")
+add_library(ex_06_01_library "create_str.cpp" "create_str.h" "tic_tac_toe_manager.cpp" "tic_tac_toe_manager.h" "tic_tac3.h" "tic_tac4.h" "tic_tac3.cpp" "tic_tac4.cpp" )
+add_executable(ex_06_01_exe "main.cpp" "create_str.cpp" "tic_tac_toe_manager.cpp" "tic_tac3.cpp" "tic_tac4.cpp")

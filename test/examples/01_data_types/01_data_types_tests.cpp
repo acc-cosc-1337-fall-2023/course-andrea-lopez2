@@ -1,21 +1,22 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 
-TEST_CASE("Verify Test Configuration", "verification") {
-	REQUIRE(true == true);
+//#include "int.h"
+#include "decimals.h"
+
+
+TEST_CASE("Verify sales commission based on the bonus pay ") 
+{
+//	REQUIRE(get_sales_commission(100) == 5);
+//	REQUIRE(get_sales_commission(750) == 45);
+	
+//	REQUIRE(get_sales_commission(1750) == 140);
+//	REQUIRE(get_sales_commission(1499) == 104.93);
+//	REQUIRE(get_sales_commission(1100) == 77.0);
+REQUIRE(vector_of_primes(50) == vector<int> {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47} );
+
+REQUIRE(vector_of_primes(10) == vector<int> {2, 3, 5, 7} );
+
 }
 
-/*test case echo_variable */
-
-/*test case add_to_double_1 with 0 as parameter*/
-
-/*test case add_to_double_1 with 1 as parameter*/
-
-/*test case add_to_double_2 with 0 as parameter*/
-
-/*test case add_to_double_2 with 1 as parameter*/
-
-/*test case char test ASCII values */
-
-/*test case string test ASCII values Joe characters are equal to 74, 111, and 101*/
 

@@ -1,6 +1,8 @@
 
 #include "create_str.h"
 #include "tic_tac_toe_manager.h"
+#include "tic_tac3.h"
+#include "tic_tac4.h"
 #include<iostream>
 #include<string>
 #include<limits>
@@ -14,7 +16,10 @@ using std::cout; using std::cin; using std::string;
 int main() 
 {
 	TicTacToeManager manager;
-	TicTacToe game;
+	//TicTacToe game;
+	Tic_Tac_3 game;
+	//Tic_Tac_3 game3;
+	//Tic_Tac_4 game4;
 	string first_player;
 	char user_choice = 'y';
 	int position;

@@ -1,5 +1,6 @@
 //write include statement for decisions header
 #include "decisions.h"
+#include <vector>
 
 //Write code for function(s) code here
 string get_letter_grade_using_if(int grade)
@@ -56,4 +57,44 @@ string get_letter_grade_using_switch(int grade)
         
     }
     return letter; 
+}
+
+
+vector<int> vector_of_primes(int n)
+{
+  int i;
+  vector<int> result;
+  for(i=2;i<=n;i++)
+  {
+    if(is_prime(i))
+
+  result.push_back(i);
+
+  }
+
+return result;
+
+}
+
+
+bool is_prime(int n)
+{
+ int i;
+ bool prime = true;
+
+  // 0 and 1 are not prime numbers
+  if (n == 0 || n == 1) {
+    prime = false;
+  }
+
+  // loop to check if n is prime
+  for (i = 2; i <= n/2; ++i) {
+    if (n % i == 0) {
+      prime = false;
+      break;
+    }
+  }
+
+return prime;
+
 }
