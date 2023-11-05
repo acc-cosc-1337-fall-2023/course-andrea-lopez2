@@ -45,18 +45,34 @@ void TicTacToe::mark_board(int position)
     set_next_player();
 }
 
-void TicTacToe::display_board() const
+void TicTacToe::display_board(int size) const
 {
     int ni = 0;
-    for(long unsigned int i=0; i < pegs.size(); i += 3)
-    {    
-        cout<<pegs[i]<<"|"<<pegs[i+1]<<"|"<<pegs[i+2]<<"\n";
-        ni++;
-        if (ni == 3)
+    if (size == 3)
+    {
+        for (long unsigned int i = 0; i < pegs.size(); i += size)
         {
-           cout<<"\n";
-           ni=0;
-        }       
+            cout << pegs[i] << "|" << pegs[i + 1] << "|" << pegs[i + 2] << "\n";
+            ni++;
+            if (ni == size)
+            {
+                cout << "\n";
+                ni = 0;
+            }
+        }
+    }
+    else
+    {
+        for (long unsigned int i = 0; i < pegs.size(); i += size)
+        {
+            cout << pegs[i] << "|" << pegs[i + 1] << "|" << pegs[i + 2] << "|" << pegs[i + 3] << "\n";
+            ni++;
+            if (ni == size)
+            {
+                cout << "\n";
+                ni = 0;
+            }
+        }
     }
 }
 

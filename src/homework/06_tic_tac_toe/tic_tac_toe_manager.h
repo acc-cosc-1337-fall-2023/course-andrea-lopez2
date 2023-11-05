@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include <memory>
 #include "tic_tac_toe.h"
 #ifndef TIC_TAC_TOE_MANAGER
 #define TIC_TAC_TOE_MANAGER
@@ -12,11 +13,16 @@ using std::cout;
 class TicTacToeManager 
 {
 public:
-    TicTacToeManager();
-    void save_game(TicTacToe& game);
+    TicTacToeManager(){};
+    //void save_game(TicTacToe& game);
+    void save_game(std::unique_ptr<TicTacToe> &game);
+    
+    // friend ostream& operator<<(ostream& out, TicTacToeManager& manager);
+    friend ostream &operator<<(std::ostream &out, std::unique_ptr<TicTacToeManager> &manager);
+    //vector<TicTacToe> games;
+    std::vector<std::unique_ptr<TicTacToe>> games;
+
     void get_winner_total(int& o, int& x, int& tie);
-    friend ostream& operator<<(ostream& out, TicTacToeManager& manager);
-    vector<TicTacToe> games;
 
  private:
 

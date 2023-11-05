@@ -4,12 +4,15 @@ using std::ostream;
 using std::cout;
 using namespace std;
 
-TicTacToeManager::TicTacToeManager() : x_win(0), o_win(0), ties(0) {}
+//TicTacToeManager::TicTacToeManager() : x_win(0), o_win(0), ties(0) {}
 
-void TicTacToeManager::save_game(TicTacToe& game)
+void TicTacToeManager::save_game(std::unique_ptr<TicTacToe>& game)
 {
-    update_winner_count(game.get_winner());
-    games.push_back(game);
+    //update_winner_count(game.get_winner());
+    //games.push_back(game);
+
+    update_winner_count(game->get_winner());
+    games.push_back(std::move(game)); // need to review leak memmory
     
 }
 void TicTacToeManager::get_winner_total(int& x, int& o, int& tie)
@@ -33,18 +36,20 @@ void TicTacToeManager::update_winner_count(string winner)
         ties ++;
     }
 }
-ostream& operator<<(ostream& out, TicTacToeManager& manager)
+//ostream& operator<<(ostream& out, std::unique_ptr<TicTacToeManager> &manager)
+ostream &operator<<(ostream &out, std::unique_ptr<TicTacToeManager> &manager)
 {
     cout<<"Game History: \n";
-    for(TicTacToe& game: manager.games)
+    for(const auto& game: manager->games)
     {
-        game.display_board();
+        game->display_board(3);
     }
 
-    out<<"O Total wins : "<<manager.o_win <<"\n";
-	out<<"X Total wins : "<<manager.x_win <<"\n";
-	out<<"Total Tails  : "<<manager.ties <<"\n";
+    out<<"O Total wins : "<<manager->o_win <<"\n";
+	out<<"X Total wins : "<<manager->x_win <<"\n";
+	out<<"Total Tails  : "<<manager->ties <<"\n";
 
 
     return out;
 }
+

@@ -18,7 +18,7 @@ public:
     TicTacToeManager();
     //void save_game(TicTacToe& game);
     void get_winner_total(int& o, int& x, int& t);
-    friend intream& operator<<(intream& in, TicTacToeManager& manager);
+   // friend intream& operator<<(intream& in, TicTacToeManager& manager);
     friend ostream& operator<<(ostream& out, TicTacToeManager& manager);
     //vector<TicTacToe> games;
     vector<std::unique_ptr<TicTacToe>> games;
