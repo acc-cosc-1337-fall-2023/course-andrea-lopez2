@@ -9,14 +9,14 @@
 class TicTacToe
 {
 public:
-    TicTacToe();
-    TicTacToe(int size) : pegs(size * size, " "){}; // this will initialize pegs (vector) to size * size of " "
+    //TicTacToe();
+    TicTacToe(int size) : pegs(size * size, " "), board_size(size){}; // this will initialize pegs (vector) to size * size of " "
     bool game_over();
     void start_game(std::string first_player);
     void mark_board(int position);
     std::string get_player() const{return player;}
     //void display_board() const;
-    void display_board(int size) const;
+    void display_board() const;
     std::string get_winner(); 
     
 protected:
@@ -34,6 +34,7 @@ private:
     bool check_board_full();
     void set_winner();
     std::string winner;
+    int board_size;
 
 };
 

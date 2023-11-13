@@ -4,6 +4,8 @@ using std::ostream;
 using std::cout;
 using namespace std;
 
+
+
 //TicTacToeManager::TicTacToeManager() : x_win(0), o_win(0), ties(0) {}
 
 void TicTacToeManager::save_game(std::unique_ptr<TicTacToe>& game)
@@ -36,18 +38,19 @@ void TicTacToeManager::update_winner_count(string winner)
         ties ++;
     }
 }
-//ostream& operator<<(ostream& out, std::unique_ptr<TicTacToeManager> &manager)
-ostream &operator<<(ostream &out, std::unique_ptr<TicTacToeManager> &manager)
+
+// ostream& operator<<(ostream& out, make_unique<TicTacToeManager> manager)
+ostream &operator<<(ostream &out, const TicTacToeManager &manager)
 {
-    cout<<"Game History: \n";
-    for(const auto& game: manager->games)
+    out<<"Game History: \n";
+    for(const auto& game: manager.games)
     {
-        game->display_board(3);
+        game->display_board();
     }
 
-    out<<"O Total wins : "<<manager->o_win <<"\n";
-	out<<"X Total wins : "<<manager->x_win <<"\n";
-	out<<"Total Tails  : "<<manager->ties <<"\n";
+    out<<"O Total wins : "<<manager.o_win <<"\n";
+	out<<"X Total wins : "<<manager.x_win <<"\n";
+	out<<"Total Tails  : "<<manager.ties <<"\n";
 
 
     return out;

@@ -10,7 +10,7 @@ using std::vector;
 class TicTacToe3 : public TicTacToe
 {
 public:
-    TicTacToe3(){ /* empty*/}
+    TicTacToe3() : TicTacToe(3){ /* empty*/}
     TicTacToe3(int size) : TicTacToe(size){ /* empty*/}
 
 private:

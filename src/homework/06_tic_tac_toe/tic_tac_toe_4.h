@@ -8,10 +8,7 @@ using std::vector;
 class TicTacToe4 : public TicTacToe
 {
 public:
-    TicTacToe4()
-    { /* empty*/
-    }
-    TicTacToe4(int size) : TicTacToe(size)
+    TicTacToe4() : TicTacToe(4)
     { /* empty*/
     }
     ~TicTacToe4()

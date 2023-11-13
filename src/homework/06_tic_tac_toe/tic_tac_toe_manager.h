@@ -10,6 +10,9 @@ using std::string;
 using std::vector;
 using std::ostream;
 using std::cout;
+using std::make_unique;
+using std::unique_ptr;
+
 class TicTacToeManager 
 {
 public:
@@ -18,7 +21,8 @@ public:
     void save_game(std::unique_ptr<TicTacToe> &game);
     
     // friend ostream& operator<<(ostream& out, TicTacToeManager& manager);
-    friend ostream &operator<<(std::ostream &out, std::unique_ptr<TicTacToeManager> &manager);
+    friend ostream &operator<<(std::ostream &out, const TicTacToeManager &manager);
+    // friend ostream& operator<<(ostream& out, make_unique<TicTacToeManager>& manager);
     //vector<TicTacToe> games;
     std::vector<std::unique_ptr<TicTacToe>> games;
 
